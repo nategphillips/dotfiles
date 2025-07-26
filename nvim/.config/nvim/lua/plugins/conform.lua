@@ -1,0 +1,32 @@
+return {
+    "stevearc/conform.nvim",
+    -- load after reading a buffer into memory
+    event = "BufRead",
+    config = function()
+        require("conform").setup({
+            formatters_by_ft = {
+                python = {
+                    -- To fix auto-fixable lint errors.
+                    "ruff_fix",
+                    -- To run the Ruff formatter.
+                    "ruff_format",
+                    -- To organize the imports.
+                    "ruff_organize_imports",
+                },
+            },
+            format_on_save = {
+                timeout_ms = 500,
+                lsp_format = "fallback",
+            },
+        })
+        -- if a formatter for conform isn't explicitly installed above, it will fall back to the
+        -- LSP's implementation, if available (for example, lua_ls includes a formatter by default,
+        -- so it gets since I don't have one installed here)
+        vim.keymap.set({ "n", "v" }, "<leader>gf", function()
+            require("conform").format({
+                timeout_ms = 500,
+                lsp_fallback = true,
+            })
+        end, { desc = "Format with conform.nvim" })
+    end,
+}
