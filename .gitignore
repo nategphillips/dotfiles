@@ -1,0 +1,4 @@
+# tmux
+# the plugins directory contain git repos, which are annoying - just don't sync them
+tmux/.config/tmux/plugins
+

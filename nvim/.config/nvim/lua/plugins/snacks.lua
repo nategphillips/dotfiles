@@ -44,7 +44,9 @@ return {
         -- rename
         { "<leader>cR",      function() Snacks.rename.rename_file() end,                             desc = "Rename File" },
         -- terminal
-        { "<C-/>",           function() Snacks.terminal() end,                                       desc = "Toggle Terminal" },
+        { "<c-/>",           function() Snacks.terminal() end,                                       desc = "Toggle Terminal" },
+        -- tmux and windows terminal compatible mode, since <c-/> gets interpreted as <c-_>
+        { "<c-_>",           function() Snacks.terminal() end,                                       desc = "Toggle Terminal" },
         -- words
         { "]]",              function() Snacks.words.jump(vim.v.count1) end,                         desc = "Next Reference",        mode = { "n", "t" } },
         { "[[",              function() Snacks.words.jump(-vim.v.count1) end,                        desc = "Prev Reference",        mode = { "n", "t" } },

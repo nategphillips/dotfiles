@@ -49,6 +49,8 @@ vim.o.undofile = true -- enable persistant undo history for each file
 
 -- exit terminal mode easier
 vim.keymap.set('t', "<C-/>", [[<C-\><C-n>:q<CR>]], { noremap = true, silent = true })
+-- tmux and windows terminal compatible mode, since <c-/> gets interpreted as <c-_>
+vim.keymap.set('t', "<C-_>", [[<C-\><C-n>:q<CR>]], { noremap = true, silent = true })
 
 -- don't exit visual mode after indenting
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
