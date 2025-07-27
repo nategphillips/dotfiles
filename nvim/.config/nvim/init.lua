@@ -7,6 +7,8 @@ vim.o.sidescrolloff = 10    -- minimum number of lines before scrolling left and
 vim.o.mouse = 'a'           -- enable mouse
 vim.o.encoding = "UTF-8"    -- set UTF-8 encoding
 vim.o.conceallevel = 2      -- conceal text like $\frac{1}{2}$ to ½ in latex
+vim.o.spell = true          -- enable spell checking
+vim.o.spelllang = "en_us"   -- set spelling locale
 
 -- diagnostics
 vim.o.signcolumn = "auto"                           -- enable the sign column only when necessary
