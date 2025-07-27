@@ -1,0 +1,48 @@
+#
+# ~/.bashrc
+#
+
+# if not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# coloring
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# shortcuts
+alias la='ls -la'
+alias ll='ls -l'
+alias cls='clear'
+alias ff='fastfetch'
+
+# safety nets
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='cggrp --preserve-root'
+
+# persistent ssh
+eval "$(keychain -q --eval ~/.ssh/id_ed25519)"
+
+# starship
+eval "$(starship init bash)"
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+
+# uv
+. "$HOME/.local/bin/env"
+
+# julia
+case ":$PATH:" in
+    *:/home/nathan/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/nathan/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# rust
+. "$HOME/.cargo/env"
