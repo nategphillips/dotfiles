@@ -1,0 +1,4 @@
+tabsize = 4
+tabchar = "space"
+wrap = false
+wraplen = 100

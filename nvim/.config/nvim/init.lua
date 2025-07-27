@@ -5,6 +5,8 @@ vim.o.cursorline = true     -- highlight the line and line number the cursor is 
 vim.o.scrolloff = 10        -- minimum number of lines before scrolling up and down
 vim.o.sidescrolloff = 10    -- minimum number of lines before scrolling left and right
 vim.o.mouse = 'a'           -- enable mouse
+vim.o.encoding = "UTF-8"    -- set UTF-8 encoding
+vim.o.conceallevel = 2      -- conceal text like $\frac{1}{2}$ to ½ in latex
 
 -- diagnostics
 vim.o.signcolumn = "auto"                           -- enable the sign column only when necessary

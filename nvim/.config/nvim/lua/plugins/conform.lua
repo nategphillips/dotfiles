@@ -6,15 +6,22 @@ return {
         require("conform").setup({
             formatters_by_ft = {
                 python = {
-                    -- To fix auto-fixable lint errors.
+                    -- fix auto-fixable lint errors
                     "ruff_fix",
-                    -- To run the Ruff formatter.
+                    -- run the Ruff formatter
                     "ruff_format",
-                    -- To organize the imports.
+                    -- organize the imports
                     "ruff_organize_imports",
                 },
+                tex = {
+                    -- fast formatter, doesn't align things like &= formulae in align blocks though
+                    -- configuration is in ~/.config/tex-fmt/tex-fmt.toml
+                    "tex-fmt"
+                }
             },
             format_on_save = {
+                -- :h conform.format to see all options
+                -- set async = true to avoid timeouts entirely
                 timeout_ms = 500,
                 lsp_format = "fallback",
             },
@@ -25,7 +32,7 @@ return {
         vim.keymap.set({ "n", "v" }, "<leader>gf", function()
             require("conform").format({
                 timeout_ms = 500,
-                lsp_fallback = true,
+                lsp_format = "fallback",
             })
         end, { desc = "Format with conform.nvim" })
     end,

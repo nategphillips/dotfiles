@@ -24,6 +24,9 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='cggrp --preserve-root'
 
+# browse manpages with vim
+export MANPAGER='nvim +Man!'
+
 # persistent ssh
 eval "$(keychain -q --eval ~/.ssh/id_ed25519)"
 
@@ -46,3 +49,9 @@ esac
 
 # rust
 . "$HOME/.cargo/env"
+
+# texlive
+TEXLIVE=$HOME/texlive/2025
+export PATH=$TEXLIVE/bin/x86_64-linux:$PATH
+export MANPATH=$TEXLIVE/texmf-dist/doc/man:$MANPATH
+export INFOPATH=$TEXLIVE/texmf-dist/doc/info:$INFOPATH

@@ -7,7 +7,9 @@ return {
     build = ":TSUpdate",
     config = function()
         require("nvim-treesitter.configs").setup({
-            ensure_installed = { "c", "lua", "query", "markdown", "markdown_inline", "python"},
+            -- don't install a parser for latex, the vimtex plugin already takes care of syntax
+            -- highlighting
+            ensure_installed = { "c", "lua", "query", "markdown", "markdown_inline", "python" },
             highlight = {
                 enable = true,
                 additional_vim_regex_highlighting = false
