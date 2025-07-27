@@ -1,0 +1,17 @@
+[font]
+size = 11.0
+
+[font.normal]
+# monospace font family is defined in fontconfig
+family = "monospace"
+style = "Regular"
+
+[env]
+# explicitly set $TERM to alacritty just in case
+TERM = "alacritty"
+
+[general]
+# import colorscheme
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
