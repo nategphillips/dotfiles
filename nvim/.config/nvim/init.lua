@@ -60,6 +60,9 @@ vim.keymap.set('t', "<C-_>", [[<C-\><C-n>:q<CR>]], { noremap = true, silent = tr
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 
+-- toggle word wrap
+vim.keymap.set('n', '<leader>ww', ':set wrap!<CR>', { noremap = true, silent = true })
+
 -- autocommands
 local augroup
 vim.api.nvim_create_augroup("UserConfig", {})
