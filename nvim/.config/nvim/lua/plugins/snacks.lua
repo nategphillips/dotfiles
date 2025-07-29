@@ -5,6 +5,7 @@ return {
     lazy = false,
     ---@type snacks.Config
     opts = {
+        bufdelete = { enabled = true },
         dashboard = {
             enabled = true,
             preset = {
@@ -37,6 +38,8 @@ return {
         words = { enabled = true },
     },
     keys = {
+        -- bufdelete
+        { "<leader>bd",      function() Snacks.bufdelete() end,                                      desc = "Delete buffer" },
         -- explorer
         { "<leader>e",       function() Snacks.explorer() end,                                       desc = "File Explorer" },
         -- lazygit
