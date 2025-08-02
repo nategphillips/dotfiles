@@ -11,6 +11,10 @@ return {
             blink_cmp = {
                 style = "bordered",
             },
+            dropbar = {
+                enabled = true,
+                color_mode = true,
+            },
             gitsigns = true,
             mason = true,
             mini = true,
