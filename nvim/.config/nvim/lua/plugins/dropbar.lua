@@ -1,6 +1,8 @@
 return {
     -- dropbar provides breadcrumbs for showing where you're at in a function, class, etc.
     'Bekaboo/dropbar.nvim',
+    -- load before reading a buffer into memory
+    event = "BufReadPre",
     -- docs say this is required for fuzzy finder support, not sure if snacks will work
     -- dependencies = {
     --     'nvim-telescope/telescope-fzf-native.nvim',
