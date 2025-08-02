@@ -63,6 +63,9 @@ vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 -- toggle word wrap
 vim.keymap.set('n', '<leader>ww', ':set wrap!<CR>', { noremap = true, silent = true })
 
+-- open the diagnostic message under the cursorline
+vim.keymap.set('n', "<leader>dd", "<cmd>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
+
 -- autocommands
 local augroup
 vim.api.nvim_create_augroup("UserConfig", {})
