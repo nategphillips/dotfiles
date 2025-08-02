@@ -7,7 +7,7 @@ return {
         --       checker
 
         -- ltex_plus is better maintained fork of ltex
-        ensure_installed = { "lua_ls", "basedpyright", "texlab", "ltex_plus" },
+        ensure_installed = { "lua_ls", "basedpyright", "ruff", "texlab", "ltex_plus" },
     },
     dependencies = {
         { "mason-org/mason.nvim", opts = {} },

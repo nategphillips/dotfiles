@@ -15,6 +15,7 @@ return {
 
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("basedpyright")
+        vim.lsp.enable("ruff")
         vim.lsp.enable("texlab")
         vim.lsp.enable("ltex_plus")
 
