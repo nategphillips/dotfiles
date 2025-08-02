@@ -1,4 +1,5 @@
 return {
+    -- nvim-lspconfig is a client used to interface with the built-in lsp server in neovim
     "neovim/nvim-lspconfig",
     -- load after reading a buffer into memory
     event = "BufRead",

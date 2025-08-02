@@ -1,4 +1,5 @@
 return {
+    -- multicursor provides support for multiple cursors (until neovim 0.12 has native support)
     "jake-stewart/multicursor.nvim",
     -- load after reading a buffer into memory
     event = "BufRead",
@@ -9,7 +10,7 @@ return {
 
         local set = vim.keymap.set
 
-        -- Add or skip cursor above/below the main cursor.
+        -- add or skip cursor above/below the main cursor using arrow keys
         set({ "n", "x" }, "<up>", function() mc.lineAddCursor(-1) end)
         set({ "n", "x" }, "<down>", function() mc.lineAddCursor(1) end)
 
@@ -33,7 +34,7 @@ return {
             end)
         end)
 
-        -- Customize how cursors look.
+        -- default cursor customization options
         local hl = vim.api.nvim_set_hl
         hl(0, "MultiCursorCursor", { reverse = true })
         hl(0, "MultiCursorVisual", { link = "Visual" })

@@ -1,4 +1,5 @@
 return {
+    -- nvim-treesitter provides syntax highlighting support using ASTs
     "nvim-treesitter/nvim-treesitter",
     -- treesitter does not support lazy loading
     lazy = false,

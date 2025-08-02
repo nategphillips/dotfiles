@@ -1,4 +1,5 @@
 return {
+    -- blink is a completion plugin for lsp servers and code snippets
     'saghen/blink.cmp',
     -- load when entering insert mode
     event = "InsertEnter",

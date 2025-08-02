@@ -1,11 +1,15 @@
 return {
+    -- snacks is a collection of quality-of-life plugins
     "folke/snacks.nvim",
+    -- load before other plugins
     priority = 1000,
-    -- snacks are smart and don't need lazy loading
+    -- snacks are smart and don't need lazy loading (I trust you folke)
     lazy = false,
     ---@type snacks.Config
     opts = {
+        -- delete buffers without disrupting window layout
         bufdelete = { enabled = true },
+        -- custom dashboard on load-in
         dashboard = {
             enabled = true,
             preset = {
@@ -28,13 +32,21 @@ return {
                 )
             },
         },
+        -- file explorer
         explorer = { enabled = true },
+        -- indent guides and scopes
         indent = { enabled = true },
+        -- open lazygit within neovim
         lazygit = { enabled = true },
+        -- pretty notifications
         notifier = { enabled = true },
+        -- fuzzyfind and grep pretty much anything
         picker = { enabled = true },
+        -- lsp integrated file renaming
         rename = { enabled = true },
+        -- create and toggle floating split terminals
         terminal = { enabled = true },
+        -- shows all lsp references of the word under the cursor
         words = { enabled = true },
     },
     keys = {

@@ -1,4 +1,5 @@
 return {
+    -- which-key shows available keybindings as you type them
     "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {},

@@ -1,4 +1,5 @@
 return {
+    -- vimtex calls latexmk, xelatex, etc. to compile tex files
     "lervag/vimtex",
     -- VimTeX shouldn't be lazy loaded (it has filetype associations that autoload it)
     lazy = false,

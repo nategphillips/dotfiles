@@ -1,4 +1,5 @@
 return {
+    -- vim-tmux-navigator provides seamless integration between neovim and tmux
     "christoomey/vim-tmux-navigator",
     cmd = {
         "TmuxNavigateLeft",
