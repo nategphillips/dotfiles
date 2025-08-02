@@ -1,0 +1,3 @@
+# disable highlighting of active text
+set highlight-active-color "rgba(255, 255, 255, 0)"
+set highlight-color "rgba(255, 255, 255, 0)"
