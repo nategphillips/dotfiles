@@ -44,6 +44,8 @@ return {
         picker = { enabled = true },
         -- lsp integrated file renaming
         rename = { enabled = true },
+        -- allows lsp warnings and gitsigns to coexist peacefully
+        statuscolumn = { enabled = true },
         -- create and toggle floating split terminals
         terminal = { enabled = true },
         -- shows all lsp references of the word under the cursor
