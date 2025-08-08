@@ -14,7 +14,7 @@ alias la='ls -la'
 alias ll='ls -l'
 alias cls='clear'
 alias ff='fastfetch'
-alias tmux='tmux new -s vibecoding'
+alias tm='tmux new -s vibecoding'
 
 # safety nets
 alias rm='rm -i'

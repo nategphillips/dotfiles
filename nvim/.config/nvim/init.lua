@@ -15,7 +15,7 @@ vim.o.signcolumn = "auto"                           -- enable the sign column on
 vim.keymap.set({ 'i', 'n', 'v' }, "<C-c>", "<Esc>") -- make <C-c> trigger the InsertLeave command
 vim.diagnostic.config({
     virtual_text = true,                            -- enable virtual text popups for LSP warnings, etc.
-    update_in_insert = true,                        -- update diagnostics while in insert mode
+    update_in_insert = false,                       -- don't update diagnostics while in insert mode
     underline = true,                               -- underline code where warnings appear
     severity_sort = true,                           -- sort popups by severity
     signs = {
