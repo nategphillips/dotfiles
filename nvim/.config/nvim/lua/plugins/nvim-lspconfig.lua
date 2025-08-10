@@ -19,6 +19,7 @@ return {
         vim.lsp.enable("ruff")
         vim.lsp.enable("texlab")
         vim.lsp.enable("ltex_plus")
+        vim.lsp.enable("julials")
 
         vim.keymap.set('n', "gh", vim.lsp.buf.hover, { desc = "LSP [h]over" })
         -- conform.nvim handles formatting and allows for fallbacks to the LSP if a formatter isn't
