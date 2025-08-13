@@ -18,9 +18,8 @@ return {
             config = {
                 repl_definition = {
                     julia = {
-                        -- start the REPL from inside the src/ directory and mark the base directory
-                        -- as the project source
-                        command = { "bash", "-c", "cd src && julia --project=.. --banner=no" },
+                        -- works for script files that call Julia projects
+                        command = { "julia", "--project", "--banner=no" },
                         block_dividers = { "#%%" },
                     },
                 },
