@@ -6,7 +6,7 @@ vim.o.scrolloff = 10        -- minimum number of lines before scrolling up and d
 vim.o.sidescrolloff = 10    -- minimum number of lines before scrolling left and right
 vim.o.mouse = 'a'           -- enable mouse
 vim.o.encoding = "UTF-8"    -- set UTF-8 encoding
-vim.o.conceallevel = 2      -- conceal text like $\frac{1}{2}$ to ½ in latex
+vim.o.conceallevel = 0      -- don't conceal text (except in .tex files, see the autocommand below)
 vim.o.spell = true          -- enable spell checking
 vim.o.spelllang = "en_us"   -- set spelling locale
 
@@ -75,6 +75,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     group = augroup,
     callback = function()
         vim.highlight.on_yank()
+    end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    desc = "Conceal text like $\frac{1}{2}$ to ½ in latex.",
+    pattern = "tex",
+    callback = function()
+        vim.opt_local.conceallevel = 2
     end,
 })
 
