@@ -10,6 +10,10 @@ vim.o.conceallevel = 0      -- don't conceal text (except in .tex files, see the
 vim.o.spell = true          -- enable spell checking
 vim.o.spelllang = "en_us"   -- set spelling locale
 
+-- cursor
+-- default [options](https://neovim.io/doc/user/options.html#'guicursor') except blink in normal mode
+vim.o.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,t-n:block-blinkon500-blinkoff500-TermCursor"
+
 -- diagnostics
 vim.o.signcolumn = "auto"                           -- enable the sign column only when necessary
 vim.keymap.set({ 'i', 'n', 'v' }, "<C-c>", "<Esc>") -- make <C-c> trigger the InsertLeave command
