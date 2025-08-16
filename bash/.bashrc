@@ -35,22 +35,6 @@ eval "$(keychain -q --eval ~/.ssh/id_ed25519)"
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
-# uv
-. "$HOME/.local/bin/env"
-
-# julia
-case ":$PATH:" in
-    *:/home/nathan/.juliaup/bin:*)
-        ;;
-
-    *)
-        export PATH=/home/nathan/.juliaup/bin${PATH:+:${PATH}}
-        ;;
-esac
-
-# rust
-. "$HOME/.cargo/env"
-
 # texlive
 TEXLIVE=$HOME/texlive/2025
 export PATH=$TEXLIVE/bin/x86_64-linux:$PATH
