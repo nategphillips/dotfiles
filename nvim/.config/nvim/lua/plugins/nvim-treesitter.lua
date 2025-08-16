@@ -8,12 +8,29 @@ return {
     build = ":TSUpdate",
     config = function()
         require("nvim-treesitter.configs").setup({
-            ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "python", "julia", "yaml", "html", "bash", "powershell", "toml", "latex", "xml" },
+            ensure_installed = {
+                "c",
+                "lua",
+                "vim",
+                "vimdoc",
+                "query",
+                "markdown",
+                "markdown_inline",
+                "python",
+                "julia",
+                "yaml",
+                "html",
+                "bash",
+                "powershell",
+                "toml",
+                "latex",
+                "xml",
+            },
             highlight = {
                 enable = true,
                 -- the vimtex plugin takes care of syntax highlighting for latex files, but the
                 -- markview plugin relies on treesitter's latex parsing for its functionality
-                -- disable = { "latex" },
+                disable = { "latex" },
                 -- disabling recommended by catppuccin docs
                 additional_vim_regex_highlighting = false
             },
