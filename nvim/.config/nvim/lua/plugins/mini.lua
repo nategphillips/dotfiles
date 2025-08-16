@@ -14,8 +14,8 @@ return {
         -- MiniIcons.mock_nvim_web_devicons()
         -- move selected lines around with <Alt-hjkl>
         require("mini.move").setup()
-        -- autocomplete ([{}]) pairs
-        require("mini.pairs").setup()
+        -- autocomplete ([{}]) pairs - this was pissing me off honestly
+        -- require("mini.pairs").setup()
         -- simple statusline
         require("mini.statusline").setup()
         -- simple tabline
