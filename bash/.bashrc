@@ -35,6 +35,9 @@ eval "$(keychain -q --eval ~/.ssh/id_ed25519)"
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
+# julia
+export JULIA_NUM_THREADS=auto,auto
+
 # texlive
 TEXLIVE=$HOME/texlive/2025
 export PATH=$TEXLIVE/bin/x86_64-linux:$PATH
