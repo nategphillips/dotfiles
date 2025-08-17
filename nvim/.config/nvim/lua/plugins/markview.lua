@@ -13,8 +13,8 @@ return {
 
     filetypes = { "markdown" },
 
-    -- For blink.cmp's completion source
-    dependencies = {
-        "saghen/blink.cmp"
-    },
+    -- For blink.cmp's completion source - this makes blink load on startup, which I don't like
+    -- dependencies = {
+    --     "saghen/blink.cmp"
+    -- },
 };
