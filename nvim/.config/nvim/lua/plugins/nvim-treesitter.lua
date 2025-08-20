@@ -23,14 +23,15 @@ return {
                 "bash",
                 "powershell",
                 "toml",
-                "latex",
+                -- lags render-markdown out the wazoo
+                -- "latex",
                 "xml",
             },
             highlight = {
                 enable = true,
                 -- the vimtex plugin takes care of syntax highlighting for latex files, but latex
                 -- inside markdown files needs the treesitter parser
-                disable = { "latex" },
+                -- disable = { "latex" },
                 -- disabling recommended by catppuccin docs
                 additional_vim_regex_highlighting = false
             },
