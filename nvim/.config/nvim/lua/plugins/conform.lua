@@ -2,7 +2,7 @@ return {
     -- conform is a formatting plugin that calls cli tools inside neovim
     "stevearc/conform.nvim",
     -- load after reading a buffer into memory
-    event = "BufRead",
+    event = "BufReadPost",
     config = function()
         require("conform").setup({
             formatters_by_ft = {

@@ -1,8 +1,8 @@
 return {
     -- vim-doge automatically generates docstrings for several languages using treesitter
     "kkoomen/vim-doge",
-    -- load after reading a buffer into memory
-    event = "BufRead",
+    -- only load for python files
+    ft = { "python" },
     init = function()
         -- disable default keymaps (they conflict)
         vim.g.doge_enable_mappings = false

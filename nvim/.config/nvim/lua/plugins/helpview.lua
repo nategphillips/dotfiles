@@ -1,8 +1,8 @@
 return {
     -- helpview.nvim is a pretty viewer for neovim help files
     "OXY2DEV/helpview.nvim",
-    -- load before reading a buffer into memory
-    event = "BufReadPre",
+    -- load after reading a buffer into memory
+    event = "BufReadPost",
     -- -- this plugin is already lazy-loaded, so don't make it redundant
     -- lazy = false,
 

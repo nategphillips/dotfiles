@@ -1,8 +1,8 @@
 return {
     -- iron.nvim allows for interactions with a popup REPL
     "Vigemus/iron.nvim",
-    -- load after reading a buffer into memory
-    event = "BufRead",
+    -- only load for julia files
+    ft = { "julia" },
     config = function()
         local iron = require("iron.core")
         local view = require("iron.view")

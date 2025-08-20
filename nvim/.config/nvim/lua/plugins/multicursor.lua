@@ -2,7 +2,7 @@ return {
     -- multicursor provides support for multiple cursors (until neovim 0.12 has native support)
     "jake-stewart/multicursor.nvim",
     -- load after reading a buffer into memory
-    event = "BufRead",
+    event = "BufReadPost",
     branch = "1.0",
     config = function()
         local mc = require("multicursor-nvim")
