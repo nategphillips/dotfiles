@@ -38,6 +38,9 @@ export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 # julia
 export JULIA_NUM_THREADS=auto,auto
 
+# rust
+export PATH=$PATH:~/.cargo/bin
+
 # texlive
 TEXLIVE=$HOME/texlive/2025
 export PATH=$TEXLIVE/bin/x86_64-linux:$PATH

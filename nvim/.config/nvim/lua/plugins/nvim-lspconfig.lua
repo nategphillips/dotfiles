@@ -13,6 +13,22 @@ return {
                 }
             }
         }
+        vim.lsp.config.rust_analyzer = {
+            settings = {
+                ["rust-analyzer"] = {
+                    checkOnSave = true,
+                    check = {
+                        command = "clippy",
+                        features = "all",
+                        extraArgs = {
+                            "--",
+                            "-Wclippy::pedantic",
+                            "-Wclippy::nursery",
+                        },
+                    }
+                }
+            }
+        }
 
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("basedpyright")
@@ -20,6 +36,7 @@ return {
         vim.lsp.enable("texlab")
         vim.lsp.enable("ltex_plus")
         vim.lsp.enable("julials")
+        vim.lsp.enable("rust_analyzer")
 
         vim.keymap.set('n', "gh", vim.lsp.buf.hover, { desc = "LSP [h]over" })
         -- conform.nvim handles formatting and allows for fallbacks to the LSP if a formatter isn't

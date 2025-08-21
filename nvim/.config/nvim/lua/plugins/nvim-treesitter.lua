@@ -18,6 +18,7 @@ return {
                 "markdown_inline",
                 "python",
                 "julia",
+                "rust",
                 "yaml",
                 "html",
                 "bash",
