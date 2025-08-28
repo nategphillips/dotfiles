@@ -1,6 +1,6 @@
 return {
     -- mini is a collection of minimal yet useful plugins
-    "echasnovski/mini.nvim",
+    "nvim-mini/mini.nvim",
     -- load before reading a buffer into memory
     event = "BufReadPre",
     -- use the main branch
