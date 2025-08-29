@@ -27,6 +27,7 @@ return {
                 -- lags render-markdown out the wazoo
                 -- "latex",
                 "xml",
+                "regex",
             },
             highlight = {
                 enable = true,
