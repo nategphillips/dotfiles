@@ -1,8 +1,7 @@
 return {
     -- mini is a collection of minimal yet useful plugins
     "nvim-mini/mini.nvim",
-    -- load before reading a buffer into memory
-    event = "BufReadPre",
+    event = "VeryLazy",
     -- use the main branch
     version = false,
     config = function()
