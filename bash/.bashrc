@@ -42,7 +42,7 @@ export JULIA_NUM_THREADS=auto,auto
 export PATH=$PATH:~/.cargo/bin
 
 # texlive
-TEXLIVE=$HOME/texlive/2025
+TEXLIVE=$HOME/texlive/2026
 export PATH=$TEXLIVE/bin/x86_64-linux:$PATH
 export MANPATH=$TEXLIVE/texmf-dist/doc/man:$MANPATH
 export INFOPATH=$TEXLIVE/texmf-dist/doc/info:$INFOPATH
