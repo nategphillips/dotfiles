@@ -2,7 +2,7 @@
 vim.o.number = true         -- line numbers
 vim.o.relativenumber = true -- relative line numbers
 vim.o.cursorline = true     -- highlight the line and line number the cursor is on
-vim.o.scrolloff = 10        -- minimum number of lines before scrolling up and down
+vim.o.scrolloff = 5         -- minimum number of lines before scrolling up and down
 vim.o.sidescrolloff = 10    -- minimum number of lines before scrolling left and right
 vim.o.mouse = 'a'           -- enable mouse
 vim.o.encoding = "UTF-8"    -- set UTF-8 encoding
