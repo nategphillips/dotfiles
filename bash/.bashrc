@@ -25,6 +25,9 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='cggrp --preserve-root'
 
+# update system
+alias sysupdate='yay && tlmgr update --self && tlmgr update --all && rustup update && juliaup update'
+
 # browse manpages with vim
 export MANPAGER='nvim +Man!'
 
