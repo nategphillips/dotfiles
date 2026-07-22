@@ -9,6 +9,7 @@ return {
         -- most integrations are enabled by default, but I like to manually enable them anyway
         integrations = {
             blink_cmp = {
+                enabled = true,
                 style = "bordered",
             },
             dropbar = {
