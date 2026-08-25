@@ -16,9 +16,10 @@ return {
             "texlab",
             -- ltex_plus is a more maintained fork of ltex that provides grammar and spell checking
             "ltex_plus",
-            -- julials is broken(!) when installed with mason right now, so it's installed manually
+            -- julials is no longer broken with mason, yay!
             --      - see https://github.com/mason-org/mason-lspconfig.nvim/issues/582
             --      - and https://discourse.julialang.org/t/neovim-languageserver-jl-crashing-again/130273/3
+            "julials",
         },
     },
     dependencies = {
