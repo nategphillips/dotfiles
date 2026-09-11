@@ -98,7 +98,7 @@ sysclean() {
     fi
 
     _check_step journalctl "Vacuum system and user journal to 7 days" \
-        journalctl --vacuum-time=7d || return
+        sudo journalctl --vacuum-time=7d || return
 
     printf '\n\033[1;32m==> sysclean complete\033[0m\n'
 }
