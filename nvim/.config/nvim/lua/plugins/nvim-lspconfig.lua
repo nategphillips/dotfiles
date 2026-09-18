@@ -14,12 +14,21 @@ return {
             }
         }
 
+        vim.lsp.config("jetls", {
+            cmd = {
+                "jetls",
+                "serve",
+            },
+            filetypes = { "julia" },
+            root_markers = { "Project.toml" }
+        })
+
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("basedpyright")
         vim.lsp.enable("ruff")
         vim.lsp.enable("texlab")
         vim.lsp.enable("ltex_plus")
-        vim.lsp.enable("julials")
+        vim.lsp.enable("jetls")
 
         vim.keymap.set('n', "gh", vim.lsp.buf.hover, { desc = "LSP [h]over" })
         -- conform.nvim handles formatting and allows for fallbacks to the LSP if a formatter isn't

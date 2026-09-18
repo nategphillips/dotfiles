@@ -15,8 +15,8 @@ return {
                     "ruff_organize_imports",
                 },
                 tex = {
-                    -- very fast formatter written in rust by the way, doesn't align things like &=
-                    -- formulae in align blocks though
+                    -- very fast formatter written in rust by the way, and now has support for
+                    -- aligning tables
                     -- configuration is in ~/.config/tex-fmt/tex-fmt.toml
                     "tex-fmt"
                 }

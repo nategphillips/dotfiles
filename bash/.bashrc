@@ -115,6 +115,7 @@ export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # julia
 export JULIA_NUM_THREADS=auto,auto
+export PATH=$PATH:~/.julia/bin
 
 # rust
 export PATH=$PATH:~/.cargo/bin

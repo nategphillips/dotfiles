@@ -16,11 +16,11 @@ return {
             "texlab",
             -- ltex_plus is a more maintained fork of ltex that provides grammar and spell checking
             "ltex_plus",
-            -- the mason version of julials might still be relying on StaticLint and SymbolServer,
-            -- which were deprecated on 13-07-2026, so sticking with a manual install for now...
-            --      - see https://github.com/mason-org/mason-lspconfig.nvim/issues/582
-            --      - and https://discourse.julialang.org/t/neovim-languageserver-jl-crashing-again/130273/3
-            -- "julials",
+            -- many features of julials (go to definition, all warnings, etc.) don't seem to work
+            -- with neovim anymore after their move to JuliaWorkspaces.jl on 13-07-2026...
+            -- unfortunately, this seems to be a vscode-first plugin (sigh), which means it's
+            -- unlikely to get fixed anytime soon - JETLS.jl seems to be a better language server
+            -- anyway
         },
     },
     dependencies = {
