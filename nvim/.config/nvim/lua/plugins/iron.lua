@@ -10,7 +10,8 @@ return {
         -- trying to emulate how the Julia extension for VSCode works - sending an entire file calls
         -- include() instead of pasting the contents of the file into the REPL
         local function send_current_file()
-            local file = vim.fn.expand("%:t")
+            -- reference relative path to allow calling files from a subdirectory like /src
+            local file = vim.fn.expand("%:.")
             iron.send(nil, { string.format('include("%s")\n', file) })
         end
 
