@@ -21,11 +21,13 @@ return {
                     "tex-fmt"
                 }
             },
-            format_on_save = {
-                -- :h conform.format to see all options
-                -- set async = true to avoid timeouts entirely
-                timeout_ms = 500,
-                lsp_format = "fallback",
+            -- :h conform.format to see all options
+            format_after_save = {
+                -- formatting after save allows async to be used, which is useful for things like
+                -- the Runic.jl formatter coupled with JETLS.jl, which is pretty slow to apply
+                -- changes
+                async = true,
+                lsp_format = "fallback"
             },
         })
         -- if a formatter for conform isn't explicitly installed above, it will fall back to the
@@ -33,8 +35,8 @@ return {
         -- so it gets called since I don't have one installed here)
         vim.keymap.set({ "n", "v" }, "<leader>gf", function()
             require("conform").format({
-                timeout_ms = 500,
-                lsp_format = "fallback",
+                async = true,
+                lsp_format = "fallback"
             })
         end, { desc = "Format with conform.nvim" })
     end,
