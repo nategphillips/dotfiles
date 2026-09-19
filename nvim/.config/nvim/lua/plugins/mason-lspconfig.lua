@@ -7,8 +7,8 @@ return {
         ensure_installed = {
             -- lua_ls for basic lua support because why not
             "lua_ls",
-            -- basedpyright is an improved fork of pyright for static type checking in python
-            "basedpyright",
+            -- ty for static type checking in python
+            "ty",
             -- ruff is installed here for linting highlights while editing, but it's also called
             -- from the cli via conform, not sure if this is ideal but whatever
             "ruff",

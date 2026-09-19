@@ -4,16 +4,6 @@ return {
     -- load after reading a buffer into memory
     event = "BufReadPost",
     config = function()
-        vim.lsp.config.basedpyright = {
-            settings = {
-                basedpyright = {
-                    -- too many python libraries don't have proper type checking, which makes the
-                    -- default setting of "recommended" throw way too many warnings
-                    typeCheckingMode = "basic",
-                }
-            }
-        }
-
         vim.lsp.config("jetls", {
             cmd = {
                 "jetls",
@@ -24,7 +14,7 @@ return {
         })
 
         vim.lsp.enable("lua_ls")
-        vim.lsp.enable("basedpyright")
+        vim.lsp.enable("ty")
         vim.lsp.enable("ruff")
         vim.lsp.enable("texlab")
         vim.lsp.enable("ltex_plus")
