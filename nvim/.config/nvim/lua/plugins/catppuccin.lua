@@ -5,7 +5,7 @@ return {
     -- load before other plugins
     priority = 1000,
     opts = {
-        flavour = mocha,
+        flavour = "mocha",
         -- most integrations are enabled by default, but I like to manually enable them anyway
         integrations = {
             blink_cmp = {

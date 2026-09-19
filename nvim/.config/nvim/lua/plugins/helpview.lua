@@ -4,7 +4,7 @@ return {
     -- load after reading a buffer into memory
     event = "BufReadPost",
     -- -- this plugin is already lazy-loaded, so don't make it redundant
-    -- lazy = false,
+    lazy = false,
 
     preview = {
         icon_provider = "mini",
